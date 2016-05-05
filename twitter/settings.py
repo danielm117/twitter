@@ -15,9 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
-TEMPLATE_DIRS = (
-    PROJECT_PATH + '/html/',
-)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -58,7 +55,9 @@ ROOT_URLCONF = 'twitter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'twitterApp/html',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
